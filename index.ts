@@ -1,5 +1,6 @@
 import express from "express";
 import router from "./src/routes";
+import './src/ws'
 
 const app = express();
 
@@ -7,5 +8,5 @@ const app = express();
 app.use("/api/v1/",router);
 
 app.listen(process.env.PORT,()=>{
-    console.log("connected");
+    console.log("connected via http server");
 })
